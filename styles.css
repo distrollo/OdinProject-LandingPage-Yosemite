@@ -3,9 +3,10 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     min-height: 100vh;
+    max-width: 70em;
+    margin: 0 auto;
 }
 
 /* header styles start here */
@@ -13,11 +14,28 @@ body {
 .header-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: grey;
 }
 
 .header-nav {
     display: flex;
     flex-direction: row;
+
+    gap: 1.5em;
+
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 0;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: red;
 }
 
 /* banner styles start here */
@@ -25,11 +43,18 @@ body {
 .banner-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+
+    background-color: grey;
 }
 
 .banner-text-container {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
 }
 
 .banner-image {
@@ -43,16 +68,29 @@ body {
 .info-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    background-color: white;
 }
 
 .info-card-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
+
+    width: 200px;
+    margin: 1em;
+    padding: .5em;
+
+    background-color: lightpink;
 }
 
 /* quote styles start here */
@@ -60,6 +98,11 @@ body {
 .quote-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    background-color: lightgrey;
 }
 
 /* call-to-action styles start here */
@@ -68,11 +111,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+
+    background-color: white;
 }
 
 .cta-block {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 20em;
+    margin: 4em auto;
+    padding: 4em 10em;
+
+    background-color: blue;
 }
 
 .cta-text-container {
@@ -88,4 +142,6 @@ body {
     justify-content: center;
 
     margin-top: auto;
+
+    background-color: grey;
 }
