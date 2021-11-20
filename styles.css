@@ -1,2 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* header styles start here */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+/* banner styles start here */
+
+.banner-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* info styles start here */
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* quote styles start here */
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* call-to-action styles start here */
+
+.call-to-action-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.cta-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer styles start here */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: auto;
+}
