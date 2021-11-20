@@ -28,7 +28,7 @@ body {
 
     width: 100%;
 
-    background-color: rgb(135, 175, 98);
+    background: linear-gradient(to left, rgb(135, 175, 98), rgb(168, 204, 134) 90%);
 }
 
 .header-logo {
@@ -43,8 +43,8 @@ body {
     border-radius: 50%;
     outline: dotted 4px lightgoldenrodyellow;
 
-    transition: outline-color 500ms ease-in-out;
-    transition-delay: 50ms;
+    transition: outline-color 300ms ease-in-out;
+    transition-delay: 20ms;
 }
 
 .header-logo:hover, .header-logo:focus {
@@ -104,6 +104,7 @@ body {
     justify-content: space-around;
     flex: 1;
 
+    /* padding: 0.5em; */
     border-radius: 0 0 10px 10px;
 
     background-color: rgb(168, 204, 134);
@@ -113,13 +114,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-around;
+
+    width: 40%;
+    padding: 2em;
+    gap: 1em;
 }
 
 .banner-image {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    width: 60%;
+    height: 100%;
+    border: solid 10px rgb(159, 192, 126);
+    border-radius: 0 0 10px 0;
 }
 
 /* info styles start here */
