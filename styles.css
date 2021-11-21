@@ -16,11 +16,20 @@ body {
 
     min-height: 100vh;
     min-width: 40em;
-    max-width: 70em;
+    max-width: 80em;
     margin: 0 auto;
 
     font-family: Roboto;
     background-color: var(--main-bg-color);
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
 }
 
 /* header styles start here */
@@ -126,94 +135,21 @@ body {
 .banner-text-container {
     display: flex;
     flex-direction: column;
-    /* align-items: start; */
-    justify-content: space-between;
+    align-items: start;
+    justify-content: start;
 
     width: 40%;
     height: 100%;
+    min-width: 18em;
     min-height: 22.5em;
     /* margin-top: 1em; */
     padding: 1em 3em 3em 3em;
     gap: 1em;
 }
 
-.banner-header {
-    
-}
-
 .banner-text {
-    
+    font-size: 18px;
 }
-
-/* button styles start here */
-
-.banner-signup-button {
-    position: relative;
-
-    width: fit-content;
-    padding: 0.2em 1em;
-
-    border: solid 1px var(--main-bg-color);
-    border-radius: 4px;
-    background-color: var(--header-bg-light);
-}
-
-.banner-signup-button::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    height: 100%;
-    width: 100%;
-
-    border-radius: 4px;
-    background-color: var(--button-color-hover);
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 300ms ease-in-out;
-}
-
-.banner-signup-button:hover::after {
-    transform: scaleX(1);
-}
-
-.banner-signup-button:active {
-    background-color: var(--button-color-active);
-    transform: translateY(1px);
-    box-shadow: 0 -1px var(--button-color);
-}
-
-.banner-signup-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 300ms;
-}
-
-.banner-signup-button span::after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: -1px;
-    right: -0.7em;
-    transition: 300ms;
-}
-
-.banner-signup-button:hover span {
-    padding-right: 2em;
-}
-
-.banner-signup-button:hover span::after {
-    opacity: 1;
-    right: -0.5em;
-}
-
-/* button styles end here */
 
 .banner-image {
     display: flex;
@@ -222,9 +158,10 @@ body {
     
     width: 60%;
     height: auto;
+    min-width: 20em;
     margin: 2em 3em 3em 0;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 /* info styles start here */
@@ -236,43 +173,58 @@ body {
     justify-content: center;
     flex: 1;
 
-    margin: 1em 0;
-    padding: 0.5em;
+    padding: 4em 0.5em 2em 0.5em;
 
     background: none;
+}
+
+.info-header {
+    color: white;
 }
 
 .info-card-container {
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: space-around;
 
-    gap: 2em;
+    margin: 3em 0;
+    gap: 1em;
 }
 
 .info-card {
     display: flex;
     flex-direction: column;
 
-    width: 200px;
-    margin: 1em;
-    padding: 0.5em;
-    gap: 0.5em;
+    width: 250px;
+    margin: 1.5em;
+    /* padding: 0.5em; */
+    gap: 1em;
 }
 
 .info-card-image {
-    width: auto;
-    height: 200px;
+    display: flex;
+    flex: 0 0 1;
+    align-items: center;
+    justify-content: center;
 
-    border: solid 1px white;
+    width: auto;
+    height: 250px;
+    overflow: hidden;
+
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
+    transform: scale(1);
+    transition: transform 200ms ease;
+}
+
+.info-card-image:hover {
+    transform: scale(1.5);
 }
 
 .info-card-text {
-    width: auto;
-    
     color: white;
     border-radius: 8px;
 
@@ -284,11 +236,28 @@ body {
 .quote-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 1 1 auto;
 
-    background-color: lightgrey;
+    min-width: 40em;
+    margin: 0 0 4em 0;
+    padding: 4em 10%;
+    border-radius: 10px;
+
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.quote-text {
+    font-size: 24px;
+    font-style: italic;
+    text-align: start;
+}
+
+.quote-author {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
 }
 
 /* call-to-action styles start here */
@@ -299,7 +268,9 @@ body {
     justify-content: center;
     flex: 1;
 
-    background-color: white;
+    border-radius: 10px 10px 0 0;
+
+    background-color: var(--header-bg-light);
 }
 
 .cta-block {
@@ -312,8 +283,10 @@ body {
     gap: 10em;
     margin: 6em auto;
     padding: 2em 3em;
+    border-radius: 10px;
 
-    background-color: blue;
+    background-color: var(--banner-bg-color);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.8);
 }
 
 .cta-text-container {
@@ -324,7 +297,7 @@ body {
 
 /* button styles start here */
 
-.cta-signup-button {
+.signup-button {
     position: relative;
 
     width: fit-content;
@@ -333,9 +306,11 @@ body {
     border: solid 1px var(--main-bg-color);
     border-radius: 4px;
     background-color: var(--header-bg-light);
+
+    font-size: 16px;
 }
 
-.cta-signup-button::after {
+.signup-button::after {
     content: "";
     display: block;
     position: absolute;
@@ -355,24 +330,24 @@ body {
     transition: transform 300ms ease-in-out;
 }
 
-.cta-signup-button:hover::after {
+.signup-button:hover::after {
     transform: scaleX(1);
 }
 
-.cta-signup-button:active {
+.signup-button:active {
     background-color: var(--button-color-active);
     transform: translateY(1px);
     box-shadow: 0 -1px var(--button-color);
 }
 
-.cta-signup-button span {
+.signup-button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 300ms;
 }
 
-.cta-signup-button span::after {
+.signup-button span::after {
     content: "\00bb";
     position: absolute;
     opacity: 0;
@@ -381,17 +356,14 @@ body {
     transition: 300ms;
 }
 
-.cta-signup-button:hover span {
+.signup-button:hover span {
     padding-right: 2em;
 }
 
-.cta-signup-button:hover span::after {
+.signup-button:hover span::after {
     opacity: 1;
     right: -0.5em;
 }
-
-
-/* button styles end here */
 
 /* footer styles start here */
 
@@ -402,5 +374,6 @@ body {
 
     margin-top: auto;
 
-    background-color: grey;
+    background-color: var(--header-bg-dark);
+    box-shadow: 0 -1px 8px rgba(0,0,0,0.8);
 }
