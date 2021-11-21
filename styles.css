@@ -150,7 +150,7 @@ body {
 .banner-signup-button {
     position: relative;
 
-    width: 8em;
+    width: fit-content;
     padding: 0.2em 1em;
 
     border: solid 1px var(--main-bg-color);
@@ -204,8 +204,6 @@ body {
     transition: 300ms;
 }
 
-/* button styles end here */
-
 .banner-signup-button:hover span {
     padding-right: 2em;
 }
@@ -215,6 +213,8 @@ body {
     right: -0.5em;
 }
 
+/* button styles end here */
+
 .banner-image {
     display: flex;
     align-items: center;
@@ -223,7 +223,8 @@ body {
     width: 60%;
     height: auto;
     margin: 2em 3em 3em 0;
-    border-radius: 0 0 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
 /* info styles start here */
@@ -318,7 +319,79 @@ body {
 .cta-text-container {
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto;
 }
+
+/* button styles start here */
+
+.cta-signup-button {
+    position: relative;
+
+    width: fit-content;
+    padding: 0.2em 1em;
+
+    border: solid 1px var(--main-bg-color);
+    border-radius: 4px;
+    background-color: var(--header-bg-light);
+}
+
+.cta-signup-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 4px;
+    background-color: var(--button-color-hover);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.cta-signup-button:hover::after {
+    transform: scaleX(1);
+}
+
+.cta-signup-button:active {
+    background-color: var(--button-color-active);
+    transform: translateY(1px);
+    box-shadow: 0 -1px var(--button-color);
+}
+
+.cta-signup-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 300ms;
+}
+
+.cta-signup-button span::after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    right: -0.7em;
+    transition: 300ms;
+}
+
+.cta-signup-button:hover span {
+    padding-right: 2em;
+}
+
+.cta-signup-button:hover span::after {
+    opacity: 1;
+    right: -0.5em;
+}
+
+
+/* button styles end here */
 
 /* footer styles start here */
 
